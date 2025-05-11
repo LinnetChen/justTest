@@ -37,6 +37,25 @@ const App = {
       ],
       projects: [
         {
+          name: "遊戲事前預約頁",
+          skills: ["SCSS", "javascript", "jQuery", "Vue.js"],
+          url: "project/bp_prereg/prereg.html",
+          description: [
+            "Photoshop製作視覺layout",
+            "使用HTML和CSS進行響應式網頁設計(RWD)",
+            "使用JavaScript、jQuery、Vue.js開發前端功能",
+            "swiper套件使用",
+          ],
+          img: [
+            "img/web/web_bp_1.jpg",
+            "img/web/web_bp_2.jpg",
+            "img/web/web_bp_3.jpg",
+            "img/web/web_bp_4.jpg",
+            "img/web/web_bp_5.jpg",
+            "img/web/web_bp_6.jpg",
+          ],
+        },
+        {
           name: "遊戲 2 週年活動頁",
           skills: ["HTML", "CSS", "javascript", "jQuery"],
           url: "project/Fly_20230614_event2anniversary(noTidy)/index.html",
@@ -54,7 +73,7 @@ const App = {
         {
           name: "遊戲 1 週年活動頁",
           skills: ["HTML", "CSS", "javascript", "jQuery"],
-          url: "project/",
+          url: "",
           description: [
             "Photoshop製作視覺layout",
             "使用HTML和CSS進行網頁設計切版",
@@ -69,7 +88,7 @@ const App = {
         {
           name: "遊戲 3 週年活動頁",
           skills: ["HTML", "CSS", "javascript", "jQuery"],
-          url: "project/SRO_20221209_event3anniversary/index.html",
+          url: "",
           description: [
             "Photoshop製作視覺layout",
             "使用HTML和CSS進行響應式網頁設計切版",
@@ -80,25 +99,6 @@ const App = {
             "img/web/web_so_2.jpg",
             "img/web/web_so_3.jpg",
             "img/web/web_so_4.jpg",
-          ],
-        },
-        {
-          name: "遊戲事前預約頁",
-          skills: ["SCSS", "javascript", "jQuery", "Vue.js"],
-          url: "project/bp_prereg/prereg.html",
-          description: [
-            "Photoshop製作視覺layout",
-            "使用HTML和CSS進行響應式網頁設計(RWD)",
-            "使用JavaScript、jQuery、Vue.js開發前端功能",
-            "swiper套件使用",
-          ],
-          img: [
-            "img/web/web_bp_1.jpg",
-            "img/web/web_bp_2.jpg",
-            "img/web/web_bp_3.jpg",
-            "img/web/web_bp_4.jpg",
-            "img/web/web_bp_5.jpg",
-            "img/web/web_bp_6.jpg",
           ],
         },
       ],
