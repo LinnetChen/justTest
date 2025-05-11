@@ -65,9 +65,10 @@ const App = {
             "使用JavaScript、jQuery開發前端功能",
           ],
           img: [
+            "img/web/web_ff2th_2.gif",
             "img/web/web_ff2th_1.jpg",
-            "img/web/web_ff2th_2.jpg",
-            "img/web/web_ff2th_3.jpg",
+            "img/web/web_ff2th_4.gif",
+            "img/web/web_ff2th_3.gif",
           ],
         },
         {
