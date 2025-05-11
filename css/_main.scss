@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    background-color: #eee1c5;
+}
+body {
+    header {
+        .mainTitle1 {
+            color: #35291b;
+        }
+    }
+    section {
+        p {
+            color: #35291b;
+            font-weight: 900;
+            .time {
+                color: #463e35;
+            }
+        }
+    }
+    .sectionBg {
+        z-index: -1;
+        background: url(/img/section_bg.png) no-repeat center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+}

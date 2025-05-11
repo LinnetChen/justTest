@@ -1,0 +1,564 @@
+$color_1: #fff;
+$color_2: #35291b;
+$color_3: #71423b;
+$color_4: #000000;
+$color_5: white;
+$color_6: #463e35;
+$background-color_2: #eee1c5;
+$background-color_3: #35291b;
+$background-color_4: #ffffff;
+$background-color_5: #fff;
+$background-color_6: #eee1c5;
+
+/* Reset css */
+/* HTML5 display-role reset for older browsers */
+@keyframes scrollAni {
+    0% {
+        top: -30px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes textTransform_in {
+    0% {
+        transform-origin: 50% 100%;
+        transform: scaleY(0);
+    }
+    25% {
+        transform-origin: 50% 100%;
+        transform: scaleY(1);
+    }
+    75% {
+        transform-origin: 50% 0%;
+        transform: scaleY(1);
+    }
+    100% {
+        transform-origin: 50% 0%;
+        transform: scaleY(0);
+    }
+}
+@keyframes smoothBounceIn {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    1% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.8);
+        opacity: 1;
+    }
+    30% {
+        transform: scale(0.7);
+    }
+    40% {
+        transform: scale(1.25);
+    }
+    70% {
+        transform: scale(1);
+    }
+    71% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*# sourceMappingURL=style.css.map */
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color_6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    overflow-x: hidden;
+    background-color: $background-color_2;
+    text-align: center;
+    font-family: "微軟正黑體", sans-serif;
+    font-style: normal;
+    line-height: 1.4;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #434343;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #35291b;
+        border-radius: 3px;
+    }
+    .sectionBg {
+        z-index: -1;
+        background: url(../img/section_bg.png) no-repeat center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+div,
+span,
+applet,
+object {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    quotes: none;
+    &:before {
+        content: "";
+        content: none;
+    }
+    &:after {
+        content: "";
+        content: none;
+    }
+}
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    border: none;
+    font-size: unset;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    background-color: none;
+    outline: none;
+    border: none;
+    &:hover {
+        text-decoration: none;
+        outline: none;
+    }
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+q {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    quotes: none;
+    &:before {
+        content: "";
+        content: none;
+    }
+    &:after {
+        content: "";
+        content: none;
+    }
+}
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+embed,
+output,
+ruby {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+ol {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+article {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+details {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+    width: 85%;
+    margin: 5rem auto 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px 0;
+    .footerImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px;
+    }
+}
+header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+hgroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+menu {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+}
+
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    font-size: unset;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    background-color: none;
+    outline: none;
+    border: none;
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+* {
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.svgImg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #71423b;
+}
+.svgImg_nav {
+    width: 2rem;
+    fill: #71423b;
+    height: 2rem;
+    transition: 0.3s all;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+.svgImg_sec {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #71423b;
+}
+.navbar {
+    background: #f8f1e2;
+    color: $color_3;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    flex-direction: row-reverse;
+    .logo {
+        display: flex;
+        gap: 10px;
+        a {
+            transition: 0.2s all;
+            &:hover {
+                filter: brightness(1.5);
+            }
+        }
+    }
+    .navbar-collapse {
+        justify-content: center;
+        gap: 30px;
+        .navbar-nav {
+            li {
+                position: relative;
+                padding: 15px 0px;
+                &:last-child {
+                    .nav-link {
+                        border: 0px;
+                    }
+                }
+                .nav-link {
+                    border-right: 1px solid #35291b;
+                    padding: 0 40px;
+                    color: $color_3;
+                    cursor: pointer;
+                    &:hover {
+                        color: $color_3;
+                        position: relative;
+                        text-shadow:
+                            0 0 5px rgba(255, 255, 255, 0.7),
+                            0 0 10px rgba(255, 255, 255, 0.6),
+                            0 0 15px rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+.s4 {
+    .swiper {
+        overflow-x: hidden;
+        width: 100%;
+        padding-bottom: 50px;
+        .swiper-button-prev {
+            top: 50%;
+            width: 55px;
+            height: 55px;
+            z-index: 9;
+            transition: 0.3s all;
+            color: $color_2;
+            background: #fff;
+            border-radius: 20px;
+            opacity: 0.5;
+            border: 2px solid #fff;
+            &:after {
+                font-size: 25px;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            &:focus {
+                opacity: 1;
+            }
+        }
+        .swiper-button-next {
+            top: 50%;
+            width: 55px;
+            height: 55px;
+            z-index: 9;
+            transition: 0.3s all;
+            color: $color_2;
+            background: #fff;
+            border-radius: 20px;
+            opacity: 0.5;
+            border: 2px solid #fff;
+            &:after {
+                font-size: 25px;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            &:focus {
+                opacity: 1;
+            }
+        }
+        .swiper-button-prev.active {
+            opacity: 1;
+        }
+        .swiper-button-next.active {
+            opacity: 1;
+        }
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 600px;
+        height: auto;
+        text-align: center;
+        img {
+            display: inline-block;
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+}

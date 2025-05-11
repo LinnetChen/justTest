@@ -1,0 +1,242 @@
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    display: block;
+    margin-top: 15vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    h1.secTitle {
+        margin: 3%;
+    }
+    p {
+        font-size: clamp(1.3rem, 2vw, 2rem);
+        text-align: start;
+        color: $color_2;
+    }
+    label {
+        text-align: center;
+        color: $color_3;
+        padding: 5px 20px;
+        font-size: 1rem;
+        border: 1px solid #71423b;
+        border-radius: 5px;
+    }
+    label.seemore {
+        border: unset;
+        color: $color_4;
+        background-color: $background-color_3;
+    }
+    label.uiuxBut {
+        margin: 10px 0;
+        border: unset;
+        color: $color_4;
+        background-color: $background-color_4;
+        transition: 0.3s all;
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+    label.uiuxBut.uiuxBut4 {
+        display: none;
+    }
+    label.uiuxBut.uiuxBut5 {
+        display: none;
+    }
+    .project {
+        width: 85%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: $color_2;
+        justify-content: center;
+        padding: 10vh 0;
+        flex-wrap: wrap;
+
+        @include md {
+            padding: 5vh 0;
+        }
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .secText {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: center;
+        padding: 5vh 20px;
+        @include md {
+            width: 100%;
+            align-content: flex-start;
+            padding: unset;
+        }
+    }
+
+    .secTextUiux {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: center;
+        padding: 2vh 20px;
+        @include md {
+            width: 100%;
+            align-content: flex-start;
+            padding: unset;
+        }
+    }
+    .skillWrap {
+        margin: 10px 0;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .githubIcon {
+        text-align: center;
+        color: $color_4;
+        background-color: $background-color_5;
+        padding: 5px 20px;
+        border: 1px solid white;
+        border-radius: 5px;
+        transition: 0.3s all;
+        font-size: 1rem;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .banner {
+        position: relative;
+        overflow: hidden;
+        width: 45%;
+        border-radius: 20px;
+        z-index: 2;
+        height: -moz-fit-content;
+        height: fit-content;
+        cursor: pointer;
+
+        @include md {
+            width: 100%;
+            align-content: flex-start;
+            padding: unset;
+        }
+        a {
+            z-index: 3;
+            img {
+                transition: 0.2s linear;
+                -o-object-fit: contain;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: $color_5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.3s linear;
+            font-size: 24px;
+            pointer-events: none;
+        }
+    }
+    .bannerUiux {
+        width: 65%;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        height: -moz-fit-content;
+        height: fit-content;
+        @include md {
+            width: 100%;
+            align-content: flex-start;
+            padding: unset;
+        }
+        &:hover {
+            img {
+                transform: unset;
+            }
+        }
+    }
+}
+
+section {
+    .section_1_box {
+        width: 60%;
+        border: none;
+        padding: 0.8rem 0;
+        display: flex;
+        @include mmd {
+            width: 80%;
+        }
+        .section_1_text {
+            width: 100%;
+            text-align: start;
+            .workTitle {
+                margin-bottom: 0.5rem;
+            }
+            .list {
+                li {
+                    list-style-type: disc;
+                    margin-left: 40px;
+                    line-height: 1.5rem;
+                    margin-bottom: 0.3rem;
+                }
+            }
+        }
+        .time {
+            border: unset;
+            color: $color_3;
+            font-size: clamp(0.9rem, 1.2vw, 2rem);
+            width: 40%;
+            text-align: right;
+            // display: flex;
+            // align-items: center;
+            // justify-content: flex-end;
+        }
+    }
+}
+
+.sec03 {
+    .swiper {
+        overflow-x: hidden;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 600px;
+        height: auto;
+        text-align: center;
+        margin: auto -20px;
+        img {
+            display: inline-block;
+            width: 100%;
+            border: 10px solid #fff;
+            border-radius: 10px;
+            @include lg{
+                width: 70%;
+            }
+        }
+    }
+}
