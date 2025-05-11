@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>testn</title>
- 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Linnet's Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Linnet's Portfolio</title>
+  <link rel="shortcut icon" href="img/catball.ico">
+  <meta property="og:image" content="img/portfolioBanner.jpg" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yif6mwx.css">
+
+  <link rel="stylesheet" href="css/style.css?v=0.0.1">
 </head>
+
 <body>
+  <div id="app">
+    <div class="sectionBg"></div>
+    <header id="header">
+      <div class="imgBox">
+        <img class="header_mask" src="img/header/header_mask.png" alt="">
+        <div class="titleBox">
+          <img class="header_title" src="img/header/header_title.png" alt="">
+          <div class="scrollDown">
+            <div>
+              <p>▼</p>
+              <p>▼</p>
+            </div>
+          </div>
+        </div>
+        <img class="header_i" src="img/header/header_i2.PNG" alt="">
+      </div>
 
- <h1>TESTETESTE</h1>
+    </header>
+    <!-- section1 -->
+    <section class="sec01" id="sec01">
+      <h1 class="secTitle">
+        <img src="img/section_title_workexp.png" alt="">
+      </h1>
+      <div class="section_1_box" v-for="(i,key) in workExp" :key="i">
+        <div class="section_1_text">
+          <p class="workTitle">{{i.title}}</p>
+          <!-- <div class="skillWrap">
+            <label v-for="(skill,key) in i.skills" :key="i + 'skill'">{{ skill }}</label>
+          </div> -->
+          <ul class="list">
+            <li v-for="(i,key) in i.list" :key="i + 'list'">{{ i }}</li>
+          </ul>
+        </div>
+        <p class="time">{{ i.time }}</p>
+      </div>
+    </section>
+    <section class="sec02" id="sec02">
+      <h1 class="secTitle">
+        <img src="img/section_title_web.png" alt="">
+      </h1>
 
- 
+      <div class="project" v-for="(i,key) in projects" :key="i">
+        <!-- text -->
+        <div class="secText">
+          <p>{{i.name}}</p>
+          <div class="skillWrap">
+            <a target="_blank" rel="noreferrer noopener" :href=i.url>
+              <div class="githubIcon">查看網頁</div>
+            </a>
+            <label v-for="(skill,key) in i.skills" :key="i + 'skill'">{{ skill }}</label>
+          </div>
+        </div>
+        <!-- banner -->
+        <div class="banner">
+          <div class="swiper swiperBox2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="(img, key) in i.img" :key="key">
+                <img :src="img" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec03" id="sec03">
+      <h1 class="secTitle"> <img src="img/section_title_banner.png" alt="">
+      </h1>
+      <!-- Swiper -->
+      <div class="swiper swiperBox3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(i,key) in 5" :key="i">
+            <img :src="`img/banner/${i}.jpg`" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="title">© 2025 Linnet. All rights reserved.</div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+https://linnetchen.github.io/Linnet_protfoio/
+  <script src="js/main.js?v=0.0.1"></script>
+  <script src="js/animation.js"></script>
 </body>
+
 </html>
