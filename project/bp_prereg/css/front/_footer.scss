@@ -1,0 +1,124 @@
+footer.section {
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md {
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        justify-content: flex-start;
+    }
+}
+
+.footerbox_logo {
+    width: 20%;
+    height: 50%;
+    // border: 1px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px;
+
+    @include lg {
+        width: 38%;
+    }
+    @include md {
+        width: 40%;
+        height: 18%;
+    }
+    @include xs {
+        height: 15%;
+        width: 60%;
+    }
+    .logo_digeam {
+        object-fit: contain;
+        height: 100%;
+        width: 70%;
+        // border: 1px solid red;
+    }
+    .FIX_CI {
+        margin: 0 10px;
+        object-fit: contain;
+        height: 90%;
+        width: 30%;
+        // border: 1px solid red;
+        pointer-events: none;
+    }
+}
+
+.spec {
+    width: 21%;
+    @include lg {
+        width: 25%;
+        text-align: center;
+        order: 1;
+        margin: 10px 10px 0 0;
+    }
+    @include md {
+        width: 50%;
+    }
+    @include sm {
+        width: 80%;
+    }
+    a {
+        color: orange;
+        text-decoration: underline;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 5px 5px;
+        &:hover {
+            color: #008612;
+        }
+    }
+    .Copyright {
+        color: #000;
+    }
+}
+
+.classlavel {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include lg {
+        width: 30%;
+    }
+    @include md {
+        width: 80%;
+    }
+
+    img {
+        // border: 1px solid red;
+        width: 12%;
+        height: 100%;
+        object-fit: contain;
+        @include md {
+            width: 7%;
+        }
+        @include xsm {
+            width: 15%;
+        }
+    }
+    ul {
+        margin-left: 10px;
+        @include xsm {
+            width: 80%;
+        }
+    }
+    li {
+        font-size: 1rem;
+        &:nth-child(4) {
+            color: orange;
+        }
+    }
+}
+
+a.logo_rw,
+.classlavel {
+    @include lg {
+        margin: 10px auto;
+    }
+}

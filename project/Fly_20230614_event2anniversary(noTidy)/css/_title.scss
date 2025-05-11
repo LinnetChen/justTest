@@ -1,0 +1,303 @@
+.main {
+    .centerBox {
+        .title {
+            z-index: 2;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            // background-color: rgba(255, 255, 255, 0.699);
+            width: 980px;
+            height: 269px;
+
+
+            .title1 {
+                max-height: 227px;
+                max-width: 949px;
+                width: 100%;
+                height: 100%;
+                @extend %bg-cover;
+                background-image: url('../img/title1.png');
+                margin: 35px auto 6px;
+                z-index: 1;
+            }
+            .circle1{
+                width: 145px;
+                height: 145px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                left: 120px;
+            }
+            .circle2{
+                width: 200px;
+                height: 200px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                left: 95px;
+            }
+            .circle3{
+                width: 200px;
+                height: 200px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 22px;
+                left: 511px;
+            }
+            .circle4{
+                width: 270px;
+                height: 270px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: -3px;
+                left: 479px;
+            }
+
+            .title2 {
+                max-height: 75px;
+                max-width: 92px;
+                width: 100%;
+                height: 100%;
+                @extend %bg-cover;
+                background-image: url('../img/title2.png');
+                position: absolute;
+                top: 25px;
+                left: 144px;
+
+            }
+
+            .title3 {
+                max-height: 36px;
+                max-width: 432px;
+                width: 100%;
+                height: 100%;
+                @extend %bg-cover;
+                background-image: url('../img/title3.png');
+                position: absolute;
+                bottom: 4px;
+                right: 0px;
+            }
+        }
+    }
+}
+
+// 標題動畫區
+.main {
+    .centerBox {
+        // .title_Animation{
+        //     opacity: 0;
+        //     animation-name: titleMove;
+        //     animation-duration: 1.8s;
+        //     animation-timing-function: ease;
+        //     animation-iteration-count: 1;
+        //     animation-fill-mode: forwards;
+        // }
+        .title_Animation1{
+            opacity: 0;
+            animation: titleZoom 0.8s ease 0.06s 1;
+            animation-fill-mode: forwards;
+        }
+        .circle_Animation1{
+            opacity: 0;
+            animation: titleZoom 0.8s ease 0.5s 1;
+            animation-fill-mode: forwards;
+        }
+        .circle_Animation2{
+            opacity: 0;
+            animation: circleZoom50 0.8s ease 0.2s 1;
+            animation-fill-mode: forwards;
+        }
+        .title_Animation2{
+            opacity: 0;
+            animation: titleMoveLeftUp 0.4s ease 1s 1;
+            animation-fill-mode: forwards;
+        }
+        .title_Animation3{
+            opacity: 0;
+            animation: titleMoveRightDown 0.4s ease 1s 1;
+            animation-fill-mode: forwards;
+        }
+        .dotBox_Animation {
+
+            .ro1, .ro2, .ro3, .ro4, .ro5, .ro6, .ro7, .ro8 {
+                position: absolute;
+                top: -120px;
+                left: 489px;
+                width: 20px;
+                height: 20px;
+            }
+        
+            .ro2 {
+                transform: rotateZ(45deg);
+            }
+        
+            .ro3 {
+                transform: rotateZ(90deg);
+            }
+        
+            .ro4 {
+                transform: rotateZ(135deg);
+            }
+        
+            .ro5 {
+                transform: rotateZ(180deg);
+            }
+        
+            .ro6 {
+                transform: rotateZ(225deg);
+            }
+        
+            .ro7 {
+                transform: rotateZ(270deg);
+            }
+        
+            .ro8 {
+                transform: rotateZ(315deg);
+            }
+        
+            .ro1, .ro3, .ro5, .ro7 {
+                .dot {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    background-color: rgb(255, 218, 56);
+                    animation-delay: 0.5s;
+                    animation: dot-move 1.3s 1 linear;
+                    opacity: 0;
+                }
+            }
+        
+            .ro2, .ro4, .ro6, .ro8 {
+                .dot {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    background-color: rgb(255, 208, 0);
+                    animation: dot-move 0.9s 1 linear;
+                    opacity: 0;
+                }
+            }
+        
+        }
+    }
+}
+
+@keyframes titleZoom {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    60%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    70%{
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes circleZoom50 {
+    0% {
+        opacity: .5;
+        transform: scale(0);
+    }
+
+    60%{
+        opacity: .5;
+        transform: scale(1);
+    }
+    70%{
+        opacity: .5;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: .5;
+        transform: scale(1);
+    }
+}
+
+@keyframes titleMove {
+    0% {
+        opacity: 0;
+        top: 350px;
+    }
+
+    10% {
+        opacity: 1;
+        top: 350px;
+    }
+
+    80% {
+        opacity: 1;
+        top: 350px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 35px;
+    }
+}
+
+@keyframes titleMoveLeftUp {
+    0% {
+        opacity: 0;
+        top: 180px;
+        left: 200px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 25px;
+        left: 144px;
+    }
+}
+
+@keyframes titleMoveRightDown {
+    0% {
+        opacity: 0;
+        bottom: 80px;
+        right: 80px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 4px;
+        right: 0px;
+    }
+}
+
+@keyframes dot-move {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(50px);
+        height: 100px;
+        opacity: 1;
+    }
+
+    70% {
+        height: 20px;
+        transform: translateY(160px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(170px);
+        opacity: 0;
+    }
+}

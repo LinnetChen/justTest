@@ -1,0 +1,183 @@
+.section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sec_box {
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include md(){
+            height: 70%;
+        }
+        .sec4_box1 {
+            width: 50%;
+            height: 20%;
+            // background-color: rgba(116, 146, 136, 0.549);
+            @include md(){
+                width: 90%;
+            }
+            img {
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .sec4_box2 {
+            width: 60%;
+            height: 80%;
+            // background-color: rgba(83, 106, 98, 0.549);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0 0 0;
+            @include md(){
+                margin: 0 0 0 0;
+                width: 80%;
+                flex-direction: row;
+            }
+            @include sm(){
+                width: 90%;
+            }
+            @include xs{
+                align-items: flex-start;
+            }
+            .sec4_box3 {
+                height: 85%;
+                width: 100%;
+                // background-color: rgba(116, 146, 136, 0.549);
+                display: flex;
+                flex-direction: row;
+                @include md(){
+                    flex-direction: column;
+                    width: 90%;
+                }
+                @include xs(){
+                    width: 85%;
+                }
+                .imgBox {
+                    width: 60%;
+                    height: 100%;
+                    @include md(){
+                        height: 70%;
+                        width: 90%;
+                    }
+                    img {
+                        position: relative;
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .textBox {
+                    width: 40%;
+                    height: 100%;
+                    @include md(){
+                        height: 30%;
+                        width: 100%;
+                    }
+                    .text1_box {
+                        // border: red 1px solid;
+                        height: 60%;
+                        width: 100%;
+                        @include md(){
+                            width: 95%;
+                            height: 100%;
+                        }
+                        .title {
+                            // border: blue 1px solid;
+                            background: url(/project/bp_prereg/img/front/sec4_t1bg.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: left;
+                            position: relative;
+                            // display: inline-block;
+                            height: 30%;
+                            width: 100%;
+                            max-width: 167px;
+                            max-height: 75px;
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include md(){
+                                height: 100%;
+                            }
+                        }
+                        p {
+                            font-size: 1.7rem;
+                            line-height: 2.7rem;
+                        }
+                    }
+                    .text2_box {
+                        // border: red 1px solid;
+                        height: 40%;
+                        width: 100%;
+                        @include md(){
+                            display: none;
+                        }
+                        .title {
+                            // border: blue 1px solid;
+                            background: url(/project/bp_prereg/img/front/sec4_t2bg.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: left;
+                            position: relative;
+                            // display: inline-block;
+                            height: 25%;
+                            width: 100%;
+                            max-width: 176px;
+                            max-height: 64px;
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 2.7rem;
+                        }
+                    }
+                }
+            }
+            .sec4_box4 {
+                height: 15%;
+                width: 68%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                @include md(){
+                    top: 0%;
+                    width: 10%;
+                    height:85%;
+                    flex-direction: column;
+                }
+                @include xs(){
+                    justify-content: space-evenly;
+                    width: 15%;
+                }
+                img {
+                    cursor: pointer;
+                    position: relative;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    -webkit-filter:brightness(.5);
+                    &.active{
+                        -webkit-filter:brightness(1);
+                    }
+                }
+            }
+        }
+    }
+}

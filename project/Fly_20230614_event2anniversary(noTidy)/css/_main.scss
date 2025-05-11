@@ -1,0 +1,374 @@
+.main {
+    width: 1920px;
+    height: 100vh;
+
+    .mainBg {
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/mainBg.jpg');
+        @extend %bg-cover;
+        z-index: 0;
+
+        .mainBgDeco {
+            height: auto;
+            width: 100%;
+            position: absolute;
+        }
+
+        .mainBgDeco1 {
+            max-width: 244px;
+            top: 0;
+            right: 0;
+        }
+
+        .mainBgDeco2 {
+            max-width: 196px;
+            bottom: 82px;
+            right: -2px;
+        }
+
+        .mainBgDeco3 {
+            max-width: 263px;
+            bottom: -2px;
+            right: 0;
+        }
+
+        .mainBgDeco4 {
+            max-width: 125px;
+            bottom: 32px;
+            right: 0;
+        }
+
+        .mainBgDeco5 {
+            max-width: 140px;
+            right: 202px;
+            bottom: 0;
+        }
+
+        .mainBgDeco6 {
+            max-width: 133px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .mainBgDeco7 {
+            max-width: 100px;
+            top: 100px;
+            left: -2px;
+        }
+
+        .mainBgDeco8 {
+            max-width: 295px;
+            top: 0;
+            left: 152px;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 10%;
+        left: 6%;
+        transform: translate(-50%, -50%);
+    }
+
+    .leftBtnBox {
+        position: absolute;
+        top: 36%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pointCardBox {
+        position: absolute;
+        top: 750px;
+        left: 250px;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        max-width: 360px;
+        max-height: 284px;
+        // z-index: 2;
+
+        .pointCard {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/pointCard.png');
+            @extend %bg-cover;
+
+            .stamp1 {
+                position: absolute;
+                top: 33px;
+                left: 40px;
+            }
+
+            .stamp2 {
+                position: absolute;
+                top: 49px;
+                left: 143px;
+            }
+
+            .stamp3 {
+                position: absolute;
+                top: 52px;
+                left: 244px;
+            }
+
+            .stamp4 {
+                position: absolute;
+                top: 141px;
+                left: 29px;
+            }
+
+            .stamp5 {
+                position: absolute;
+                top: 152px;
+                left: 128px;
+            }
+        }
+        .pointCard_Animation {
+            filter: drop-shadow(1px 1px 2px rgba(255, 255, 255));
+            animation-name: pointCard_Animation;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes pointCard_Animation {
+            0%,100%{
+                top: 0px;
+            }
+            50%{
+                top: -15px;
+            }
+            60%{
+                top: -5px;
+            }
+            70%{
+                top: -10px;
+            }
+        }
+    }
+
+    .playerInformation {
+        position: absolute;
+        top: 110px;
+        right: 46px;
+        // width: 297px;
+        height: 233px;
+        background-color: #fcf4da;
+        border-radius: 12px;
+        border: 5px solid #fff;
+        display: flex;
+        flex-direction: column;
+        color: #582100;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 10px 15px;
+        // text-align: center;
+
+        .accountBox {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0 0 30px 5px;
+            justify-content: space-between;
+
+            .account {
+                margin: 0 30px 0 0;
+            }
+
+            .login {
+                color: #fff;
+                width: 52px;
+                height: 41px;
+                background-color: #c07825;
+                @extend %flex-center;
+            }
+
+            &::after {
+                content: "";
+                width: 257px;
+                height: 6px;
+                display: block;
+                background-image: url('../img/decoCrayon.png');
+                @extend %bg-cover;
+                position: absolute;
+                bottom: -15px;
+            }
+        }
+
+        .charBox {
+            margin: 0 0 30px 5px;
+            border: 1px solid #c07825;
+            position: relative;
+            width: 247px;
+
+            select {
+                position: relative;
+                display: block;
+                border: none;
+                outline: none;
+                height: 30px;
+                background-color: #fcf4da;
+                padding-right: 111px;
+                /* padding-left: 20px; */
+
+                // 隱藏下拉箭頭
+                // appearance: none;
+                // -webkit-appearance: none;
+                // -moz-appearance: none;
+                // 文字居中
+
+                // &::after {
+                //     content: "▼";
+                //     padding: 10px;
+                //     position: absolute;
+                //     top: 0px;
+                //     right: 0px;
+                //     z-index: 1;
+                //     text-align: center;
+                //     width: 10%;
+                //     height: 100%;
+                //     pointer-events: none;
+                //     box-sizing: border-box;
+                // }
+            }
+
+            &::after {
+                content: "";
+                width: 257px;
+                height: 6px;
+                display: block;
+                background-image: url('../img/decoCrayon.png');
+                @extend %bg-cover;
+                position: absolute;
+                bottom: -15px;
+            }
+        }
+
+        .pointsBox {
+            margin: 0 0 0 5px;
+        }
+
+        .btnBox {
+            margin: 0 auto;
+
+            .gameTimeCard {
+                width: 75px;
+            }
+
+            .buyRecord {
+                width: 110px;
+            }
+
+            .gameTimeCard,
+            .buyRecord {
+                margin: 8px 7px;
+                height: 37px;
+                font-size: 20px;
+                color: #c07825;
+                border: 2px solid #c07825;
+
+                &:hover {
+                    background-color: #c07825;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .centerBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // background-color: rgba(0, 0, 58, 0.185);
+        width: 990px;
+        height: 100%;
+
+        .stageBox {
+            position: absolute;
+            top: 766px;
+            left: 495px;
+            transform: translate(-50%, -50%);
+            // background-color: rgba(255, 255, 255, 0.699);
+            width: 950px;
+            height: 57px;
+            display: flex;
+            flex-direction: row;
+
+            .stageText {
+                padding: 6px 20px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 35px;
+                width: 240px;
+
+                .text24 {
+                    font-size: 26px;
+                    margin: 0 10px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 180px;
+                    height: 2px;
+                    background-color: #c67d2f;
+                    display: block;
+                }
+            }
+
+            .stageLine {
+                margin-top: 15px;
+                width: 703px;
+                height: 27px;
+                @extend %bg-cover;
+                background-image: url('../img/stageLine.png');
+
+                .box {
+                    margin-top: -15px;
+                    width: 703px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .imgBg {
+                        width: 57px;
+                        height: 57px;
+                        @extend %bg-cover;
+                        background-image: url('../img/stageBox.png');
+                        @extend %flex-center;
+                    }
+
+                    .halo {
+                        // 光暈，水平位移 垂直位移 模糊 顏色
+                        filter: drop-shadow(1px 1px 2px rgba(255, 255, 255));
+                        animation-name: jump;
+                        animation-duration: 1s;
+                        animation-timing-function: ease;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                    }
+
+                    @keyframes jump {
+                        0%,100%{
+                            margin-bottom: 0px;
+                        }
+                        40% {
+                            margin-bottom: 20px;
+                        }
+                        55% {
+                            margin-bottom: 0px;
+                        }
+                        58% {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,516 @@
+.section3_boxPC {
+    @include md() {
+        display: none;
+    }
+}
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sec_box {
+        z-index: 1;
+        width: 100%;
+        height: 90%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @include xl {
+            justify-content: space-evenly;
+        }
+        .sec3_box1 {
+            width: 50%;
+            height: 18%;
+            // background-color: rgba(116, 146, 136, 0.549);
+            img {
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .sec3_box2 {
+            width: 70%;
+            height: 70%;
+            // background-color: rgba(70, 111, 97, 0.549);
+            display: flex;
+            justify-content: space-between;
+            @include xl() {
+                height: 60%;
+            }
+            .activity_t {
+                margin: 12px;
+                display: flex;
+                align-items: center;
+                .title {
+                    font-size: 1.8em;
+                    font-weight: 600;
+                    background-color: #ff3b67;
+                    border-radius: 30px;
+                    padding: 16px 20px;
+                    color: #fff;
+                    margin-right: 10px;
+                    white-space: nowrap;
+                }
+                .text {
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    span {
+                        font-size: 1.2rem;
+                        color: #007cd4;
+                    }
+                    @include xl() {
+                        width: 70%;
+                    }
+                }
+            }
+            .sec3_boxL {
+                width: 49.5%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: #c3d12ade;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .card_box {
+                    height: 85%;
+                    width: 95%;
+                    // border: 1px solid red;
+                    display: flex;
+                    justify-content: space-evenly;
+                    @include xl {
+                        height: 69%;
+                        align-items: center;
+                    }
+                    .card {
+                        font-size: 1.3rem;
+                        line-height: 1.4rem;
+                        font-weight: 500;
+                        text-align: center;
+                        margin: 0 10px;
+                        img {
+                            height: 90%;
+                            width: 100%;
+                            cursor: pointer;
+                            position: relative;
+                            display: inline-block;
+                            object-fit: contain;
+                            @include xl() {
+                                height: 80%;
+                            }
+                            @include lmd() {
+                                height: 70%;
+                            }
+                        }
+                    }
+                    .cardL,
+                    .cardR {
+                        p,
+                        span {
+                            text-shadow:
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff;
+                        }
+                    }
+                    .cardL {
+                        p,
+                        span {
+                            color: #950200;
+                        }
+                    }
+                    .cardR {
+                        p,
+                        span {
+                            color: #0d008f;
+                        }
+                    }
+                }
+            }
+            .sec3_boxR {
+                width: 49.5%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: #c3d12ade;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .bowl {
+                    height: 58%;
+                    width: 97%;
+                    @include lg {
+                        height: 49%;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        position: relative;
+                        display: inline-block;
+                        object-fit: contain;
+                    }
+                }
+                .line {
+                    height: 5%;
+                    width: 81%;
+                    border: 5px solid #452806;
+                    border-radius: 15px;
+                    background-image: linear-gradient(to right, #ffa4a4, #feff82, #a8ff90, #9ef0ff, #b1b8ff);
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    // margin: 15px 0 0;
+                    p {
+                        position: absolute;
+                        left: 50%;
+                        line-height: 1rem;
+                        z-index: 2;
+                        transform: translate(-50%, 0px);
+                    }
+                }
+                .white {
+                    background-color: #fff;
+                    height: 100%;
+                    width: 100%;
+                    // transform: translate(0%);
+                }
+                .numLine {
+                    width: 63%;
+                    height: 2%;
+                    display: flex;
+                    justify-content: space-between;
+                    .lineStr {
+                        background-color: #452806;
+                        width: 1%;
+                        height: 100%;
+                    }
+                }
+                .addMeatBox {
+                    width: 100%;
+                    height: 15%;
+                    // background-color: rgba(31, 64, 53, 0.549);
+                    display: flex;
+                    justify-content: space-evenly;
+                    .meatBtn500,
+                    .meatBtn1000,
+                    .meatBtn3000 {
+                        color: #bababa;
+                        border: #452806 3px solid;
+                        width: 25%;
+                        height: 100%;
+                        border-radius: 22px;
+                        // font-size: .9rem;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        line-height: 1.6rem;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                    }
+                    .meatBtn500.arrived {
+                        background-color: #ff797f;
+                        color: #fff;
+                    }
+                    .meatBtn1000.arrived {
+                        background-color: #ff5961;
+                        color: #fff;
+                    }
+                    .meatBtn3000.arrived {
+                        background-color: #ff3e47;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .sec3_box3 {
+            width: 10%;
+            height: 6%;
+            // background-color: rgba(94, 135, 121, 0.549);
+            .pointBox {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to left, #f8ff89 0%, #cbff3e 70%, #b2ff1e 100%);
+                border-radius: 27px;
+                border: #452806 4px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+// 手機版
+
+.section3_boxM {
+    display: none;
+    @include md() {
+        display: block;
+    }
+}
+
+.section31,
+.section32 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sec_box {
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .sec3_box1 {
+            width: 100%;
+            height: 18%;
+            // background-color: rgba(116, 146, 136, 0.549);
+            img {
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .sec3_box2 {
+            width: 100%;
+            height: 78%;
+            // background-color: rgba(70, 111, 97, 0.549);
+            display: flex;
+            justify-content: space-between;
+            .activity_t {
+                margin: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    background-color: #ff3b67;
+                    border-radius: 30px;
+                    padding: 16px 20px;
+                    color: #fff;
+                    margin-right: 10px;
+                }
+                .text {
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    span {
+                        font-size: 1.2rem;
+                        color: #007cd4;
+                    }
+                    @include xxs() {
+                        width: 55%;
+                    }
+                }
+            }
+            .sec3_boxL {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: #c3d12ade;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include xs() {
+                    height: 80%;
+                }
+                @include xxs() {
+                    height: 80%;
+                }
+                .card_box {
+                    height: 85%;
+                    width: 90%;
+                    // border: 1px solid red;
+                    display: flex;
+                    justify-content: space-evenly;
+                    @include xs() {
+                        height: 75%;
+                    }
+                    .card {
+                        font-size: 1.3rem;
+                        line-height: 1.4rem;
+                        font-weight: 500;
+                        text-align: center;
+                        margin: 0 10px;
+                        img {
+                            cursor: pointer;
+                            height: 90%;
+                            width: 100%;
+                            position: relative;
+                            display: inline-block;
+                            object-fit: contain;
+                        }
+                    }
+                    .cardL,
+                    .cardR {
+                        p,
+                        span {
+                            text-shadow:
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff,
+                                0px 0px 5px #fff;
+                        }
+                    }
+                    .cardL {
+                        p,
+                        span {
+                            color: #950200;
+                        }
+                    }
+                    .cardR {
+                        p,
+                        span {
+                            color: #0d008f;
+                        }
+                    }
+                }
+            }
+            .sec3_boxR {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: #c3d12ade;
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include xsm() {
+                    height: 90%;
+                }
+                @include xxs() {
+                    height: 100%;
+                }
+                .bowl {
+                    height: 58%;
+                    width: 97%;
+                    @include xs() {
+                        height: 50%;
+                    }
+                    @include xxs() {
+                        height: 47%;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        position: relative;
+                        display: inline-block;
+                        object-fit: contain;
+                    }
+                }
+                .line {
+                    height: 5%;
+                    width: 70%;
+                    border: 5px solid #452806;
+                    border-radius: 15px;
+                    background-image: linear-gradient(to right, #ffa4a4, #feff82, #a8ff90, #9ef0ff, #b1b8ff);
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    margin: 10px 0 0;
+                    @include md() {
+                        width: 80%;
+                    }
+                    p {
+                        position: absolute;
+                        left: 50%;
+                        line-height: 1.5rem;
+                        z-index: 1;
+                        transform: translate(-50%, 0px);
+                    }
+                }
+                .white {
+                    background-color: #fff;
+                    height: 100%;
+                    width: 100%;
+                    // transform: translate(0%);
+                }
+                .numLine {
+                    width: 63%;
+                    height: 2%;
+                    display: flex;
+                    justify-content: space-between;
+                    .lineStr {
+                        background-color: #452806;
+                        width: 1%;
+                        height: 100%;
+                    }
+                }
+                .addMeatBox {
+                    width: 100%;
+                    height: 15%;
+                    // background-color: rgba(31, 64, 53, 0.549);
+                    display: flex;
+                    justify-content: space-evenly;
+                    .meatBtn500,
+                    .meatBtn1000,
+                    .meatBtn3000 {
+                        color: #bababa;
+                        border: #452806 3px solid;
+                        width: 25%;
+                        height: 100%;
+                        border-radius: 22px;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        line-height: 1.6rem;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                    }
+                    .meatBtn500.arrived {
+                        background-color: #ff797f;
+                        color: #fff;
+                    }
+                    .meatBtn1000.arrived {
+                        background-color: #ff5961;
+                        color: #fff;
+                    }
+                    .meatBtn3000.arrived {
+                        background-color: #ff3e47;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .sec3_box3 {
+            width: 25%;
+            height: 7%;
+            // background-color: rgba(94, 135, 121, 0.549);
+            margin-top: 1.5rem;
+            .pointBox {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to left, #f8ff89 0%, #cbff3e 70%, #b2ff1e 100%);
+                border-radius: 27px;
+                border: #452806 4px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

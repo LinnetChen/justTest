@@ -1,0 +1,262 @@
+.popup {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #faffe7eb 0%, #eaffd6 100%);
+    padding: 60px;
+    letter-spacing: 3px;
+    text-align: center;
+    .popBox {
+        width: 90vw;
+        max-width: 1700px;
+        height: 70vh;
+        padding: 0 0 30px;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .info {
+            text-align: center;
+            line-height: 35px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            .text,
+            .title {
+                color: #2c0900;
+                margin-bottom: 20px;
+            }
+            img {
+                max-width: 70%;
+                max-height: 70%;
+                width: auto;
+                height: auto;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .text {
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                ul {
+                    width: 58%;
+                    @include md{
+                        width: 100%;
+                    }
+                    li {
+                        color: #2c0900;
+                        list-style-type: decimal;
+                        list-style-position: inside;
+                    }
+                }
+            }
+        }
+    }
+    .xBtn {
+        font-size: 4rem;
+        color: #2c0900;
+        position: fixed;
+        top: 72px;
+        right: 24px;
+        cursor: pointer;
+    }
+}
+.popup2 {
+    // display: none;
+    z-index: 11;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #faffe7eb 0%, #eaffd6 100%);
+    padding: 60px;
+    letter-spacing: 3px;
+    text-align: center;
+    .popBox {
+        width: 100%;
+        max-width: 1700px;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .info {
+            z-index: 1;
+            padding: 20px;
+            width: 26%;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            
+            // background-color: rgb(255, 255, 255);
+            
+            @include lmd{
+                width: 35%;
+            }
+            @include md{
+                width: 60%;
+            }
+            @include xs{
+                width: 75%;
+            }
+            
+            .text,
+            .title {
+                color: #2c0900;
+                margin-bottom: 20px;
+            }
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                -o-object-fit: contain;
+                object-fit: contain;
+                cursor: pointer;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .text {
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                ul {
+                    li {
+                        color: #2c0900;
+                        list-style-type: decimal;
+                        list-style-position: inside;
+                    }
+                }
+            }
+        }
+    }
+    .xBtn {
+        z-index: 1;
+        font-size: 4rem;
+        color: #2c0900;
+        position: fixed;
+        top: 72px;
+        right: 24px;
+        cursor: pointer;
+    }
+    .mask2{
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+.popupEmpty {
+    // display: none;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #0000009f;
+    // background-image: linear-gradient(135deg, #faffe7eb 0%, #eaffd6 100%);
+    padding: 60px;
+    letter-spacing: 3px;
+    text-align: center;
+    .popBox {
+        width: 100%;
+        max-width: 1700px;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include xs {
+            width: 90%;
+            height: 90%;
+        }
+        .info {
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 1.3rem;
+            font-weight: 800;
+
+            background: url(/project/bp_prereg/img/front/sec2_box2Bg.png);
+            background-color: #fff;
+            border: 5px solid #fff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .text,
+            .title {
+                color: #2c0900;
+                margin-bottom: 20px;
+            }
+            img {
+                // position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                -o-object-fit: contain;
+                object-fit: contain;
+                cursor: pointer;
+            }
+            .title {
+                font-size: 2.5rem;
+                // border: 1px solid red;
+                line-height: 2.9rem;
+            }
+            .text {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .yes {
+            font-weight: 700;
+                font-size: 1.8rem;
+                color: #fff;
+                cursor: pointer;
+                background-image: linear-gradient(45deg, #ff3b67 0%, #ff886e 100%);
+                padding: 10px 20px;
+                border: 3px solid #9e2510;
+                border-radius: 30px;
+            }
+        }
+    }
+    .mask2{
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+    }
+}

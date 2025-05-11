@@ -1,0 +1,76 @@
+$xxl-media: 1775px; 
+$xl-media: 1440px;  
+$lg-media: 1024px; 
+$lmd-media: 960px;
+$md-media: 900px;
+$mmd-media: 800px;
+$sm-media: 768px;
+$xs-media: 500px;
+$xsm-media: 400px;
+$xxs-media: 375px;
+$x4s-media: 320px;
+
+@mixin xxl() {
+    @media all and (max-width: $xxl-media) {
+        @content;
+    }
+}
+
+
+@mixin xl() {
+    @media all and (max-width: $xl-media) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media all and (max-width: $lg-media) {
+        @content;
+    }
+}
+
+@mixin lmd() {
+    @media all and (max-width: $lmd-media) {
+        @content;
+    }
+}
+@mixin md() {
+    @media all and (max-width: $md-media) {
+        @content;
+    }
+}
+
+@mixin mmd() {
+    @media all and (max-width: $mmd-media) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media all and (max-width: $sm-media) {
+        @content;
+    }
+}
+
+@mixin xs() {
+    @media all and (max-width: $xs-media) {
+        @content;
+    }
+}
+
+@mixin xsm() {
+    @media all and (max-width: $xsm-media) {
+        @content;
+    }
+}
+@mixin xxs() {
+    @media all and (max-width: $xxs-media) {
+        @content;
+    }
+}
+
+@mixin x4s() {
+    @media all and (max-width: $x4s-media) {
+        @content;
+    }
+}

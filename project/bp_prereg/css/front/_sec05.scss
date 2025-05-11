@@ -1,0 +1,57 @@
+.section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sec_box {
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .sec5_box1 {
+            width: 50%;
+            height: 20%;
+            // background-color: rgba(116, 146, 136, 0.549);
+            @include md {
+                width: 90%;
+            }
+            img {
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .sec5_box2 {
+            width: 50%;
+            height: 80%;
+            // background-color: rgba(83, 106, 98, 0.549);
+            @include xxl {
+                height: 60%;
+            }
+            @include lg {
+                height: 50%;
+                width: 60%;
+            }
+            @include md {
+                height: 100%;
+                width: 90%;
+            }
+            @include xs {
+                width: 75%;
+                height: 71%;
+            }
+            @include xsm {
+                height: 61%;
+            }
+            @include xxs {
+                width: 75%;
+                height: 72%;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 25px 45px 0 0;
+
+    // background-color: #fff;
+    li {
+        // background-color: #ff9090;
+        padding: 0 10px;
+        list-style-type: none;
+
+        .navBtn4 {
+            position: relative;
+
+            &:hover::before {
+                color: #fff;
+                background-color: #522c00a6;
+                padding: 5px;
+                position: absolute;
+                font-size: 15px;
+                top: 60px;
+                left: 10px;
+                content: "前往2週年\A活動主頁";
+                white-space: pre;
+            }
+        }
+
+        // .hintText {
+        //     color: #fff;
+        //     background-color: #76430896;
+        //     padding: 5px;
+        //     position: absolute;
+        //     font-size: 13px;
+        //     top: 60px;
+        //     right: 0;
+        // }
+    }
+}

@@ -1,0 +1,329 @@
+.main {
+    .centerBox {
+        .cardBtnBox {
+            position: absolute;
+            top: 899px;
+            left: 495px;
+            transform: translate(-50%, -50%);
+            // background-color: rgba(255, 255, 255, 0.699);
+            width: 950px;
+            height: 143px;
+            // text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .cardBtn {
+                width: 286px;
+                height: 143px;
+                @extend %bg-cover;
+                background-image: url('../img/btnFlip.png');
+                // margin: 0 32px 0 124px;
+
+                .text {
+                    margin-top: 55px;
+                    font-weight: 600;
+                    font-size: 17px;
+                    text-shadow: 0 0 0.2em #c67d2f, 0 0 0.2em #c67d2f,
+                        0 0 0.2em #c67d2f
+                }
+
+                &:hover {
+                    background-image: url('../img/btnFlipHover.png');
+                }
+            }
+
+            .skipOption {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                
+                .buttonBox{
+                    display: flex;
+                    p{
+                        font-weight: 800;
+                        margin-left: 10px;
+                    }
+                    .checked {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        background-color: #4ebcff;
+                        &:before,
+                        &:after{
+                            content: "";
+                            pointer-events: none;
+                            position: absolute;
+                            color: white;
+                            border: 2px solid;
+                            background-color: white;
+                        }
+        
+                        &:before{
+                            width: 1px;
+                            height: 3px;
+                            left: 18%;
+                            top: 50%;
+                            transform: skew(0deg, 50deg);
+                        }
+        
+                        &:after{
+                            width: 8px;
+                            height: 1px;
+                            left: 42%;
+                            top: 42%;
+                            transform: skew(0deg, -50deg);
+                        }
+                    }
+    
+                    .uncheck {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #000;
+                    }
+                }
+            }
+        }
+
+        .cardBox {
+
+            position: absolute;
+            width: 950px;
+            height: 341px;
+            display: flex;
+            justify-content: space-between;
+            perspective: 2000px;
+            transform: translate3d(19.1px, 353.0px, 0.1px);
+
+            .card {
+                max-width: 201px;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                border-radius: 15px;
+                background-color: #4ebcff;
+                box-shadow: 0px 10px 10px -12px rgb(75, 43, 13);
+
+                .cardFace {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    z-index: 3;
+                    background-image: url(../img/cardFace.png);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-weight: 700;
+                    backface-visibility: hidden;
+                    padding: 25px 0;
+                    transform: rotateY(180deg);
+
+                    .icon {
+                        margin: 30px 0 10px;
+                        text-align: center;
+                    }
+
+                    .iconName {
+                        font-size: 20px;
+                        text-align: center;
+                        width: 150px;
+                    }
+
+                    .iconPrice1 {
+                        font-size: 15px;
+                        text-decoration: line-through;
+                    }
+
+                    .iconPrice2 {
+                        font-size: 20px;
+                    }
+
+                    .buttonBox0, .buttonBox1, .buttonBox2, .buttonBox3 {
+                        display: flex;
+                        flex-direction: column;
+
+                        .detailed,
+                        .iconBuy {
+                            font-size: 18px;
+                            // width: 51px;
+                            width: 100%;
+                            padding: 0 5px;
+                            height: 25px;
+                            background-color: #4ebcff;
+                            color: #fff;
+                            border-radius: 3px;
+
+                            &:hover {
+                                background-color: #fff;
+                                border: 2px solid #4ebcff;
+                                color: #4ebcff;
+                            }
+                        }
+
+                        .detailed {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .cardBg {
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 100%;
+                    @extend %bg-cover;
+                    background-image: url('../img/cardBack.png');
+                    backface-visibility: hidden;
+
+                    &::after {
+                        content: "";
+                        max-width: 201px;
+                        width: 100%;
+                        height: 100%;
+                        opacity: .75;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 15px;
+                        background-image: url('../img/sparkles.gif'),
+                            url('../img/holo.webp');
+                        background-position: 50% 50%;
+                        background-size: 194%;
+                        filter: brightness(1) contrast(1);
+                        transition: all .33s ease;
+                        mix-blend-mode: color-dodge;
+                    }
+                }
+            }
+
+            .flutter_Animation {
+                transition: all .33s ease;
+                animation: holoCard 15s ease-in-out 0s infinite;
+            }
+
+            // 翻轉卡片動畫 js添加
+            .turnOverCard {
+                transition: 0.5s all ease;
+                animation: turnOverCard2 0.7s ease 0s 1;
+                animation-fill-mode: forwards;
+            }
+
+            // 蓋卡
+            .coverCard {
+                transition: 0.5s all ease;
+                animation: coverCard 1s ease 0s 1;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes turnOverCard2 {
+
+                0% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+                }
+
+                80% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-180deg) scale(1.2);
+                }
+
+                100% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-180deg) scale(1);
+                }
+            }
+
+            @keyframes turnOverCard {
+
+                0% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+                }
+
+                55% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-720deg) scale(1.2);
+                }
+
+                80% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-900deg) scale(1.2);
+                }
+
+                90%,
+                95% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-900deg) scale(1.2);
+                }
+
+                100% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-900deg) scale(1);
+                }
+            }
+
+            @keyframes coverCard {
+                0% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+                }
+
+                100% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(-180deg);
+                }
+            }
+
+            @keyframes holoCard {
+
+                0%,
+                100% {
+                    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+                }
+
+                5%,
+                8% {
+                    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+                }
+
+                13%,
+                16% {
+                    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+                }
+
+                35%,
+                38% {
+                    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+                }
+
+                55% {
+                    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+                }
+            }
+        }
+    }
+}
+
+// 卡片淡入
+// .main {
+//     .centerBox {
+//         .cardBox_Animation{
+//             opacity: 0;
+//             animation-name: fadeIn;
+//             animation-duration: 1.8s;
+//             animation-delay: 1.8s;
+//             animation-timing-function: ease;
+//             animation-iteration-count: 1;
+//             animation-fill-mode: forwards;
+//         }
+//     }
+// }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,93 @@
+/* ===========版權聲明開關=========== */
+
+.footer-btn {
+    position: fixed;
+    z-index: 3;
+    bottom: 80px;
+    right: 239px;
+    color: rgba(121, 91, 0, 0.7);
+    font-weight: 600;
+    cursor: default;
+
+    .footer-btnbox {
+        position: fixed;
+        z-index: 1;
+        bottom: 56px;
+        right: 246px;
+        width: 50px;
+        height: 24px;
+        border-radius: 12px;
+        background-color: rgba(194, 194, 194, 0.5);
+        box-shadow: 0px 3px 0px rgba(0, 0, 0, .13) inset;
+        cursor: pointer;
+
+        .footer-btnball {
+            width: 18px;
+            height: 18px;
+            margin: 3px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 18px;
+            color: #a3a3a3;
+        }
+    }
+}
+
+/* ===========footer=========== */
+
+footer {
+    position: fixed;
+    bottom: -500px;
+    height: auto;
+    background-color: rgb(96, 210, 255);
+    padding: 10px;
+    border-top: #ffffff solid 5px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+
+    .digeamlogo {
+        transform: scale(1.2);
+        margin-right: 50px;
+    }
+    
+    .galalogo {
+        transform: scale(1.2);
+        margin-right: 50px;
+    }
+
+    .copyright {
+        width: fit-content;
+        height: 80px;
+        font-size: 15px;
+
+        div {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        a {
+            color: #ffffff;
+            display: inline;
+            border-bottom: 1.5px dotted #fff;
+        }
+    }
+
+
+    .plus {
+        width: 84px;
+    }
+
+    .notice {
+        width: fit-content;
+        list-style-type: none;
+        font-size: 10px;
+        margin: 0;
+        margin-left: -15px;
+    }
+}
+
+.row{
+    align-items: center;
+}
