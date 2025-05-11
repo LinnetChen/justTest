@@ -65,7 +65,7 @@
         <div class="secText">
           <p>{{i.name}}</p>
           <div class="skillWrap">
-            <a target="_blank" rel="noreferrer noopener" :href=i.url>
+            <a v-if="i.url && i.url !== '#'" target="_blank" rel="noreferrer noopener" :href=i.url>
               <div class="githubIcon">查看網頁</div>
             </a>
             <label v-for="(skill,key) in i.skills" :key="i + 'skill'">{{ skill }}</label>
@@ -110,7 +110,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-https://linnetchen.github.io/Linnet_protfoio/
+  https://linnetchen.github.io/Linnet_protfoio/
   <script src="js/main.js?v=0.0.1"></script>
   <script src="js/animation.js"></script>
 </body>
